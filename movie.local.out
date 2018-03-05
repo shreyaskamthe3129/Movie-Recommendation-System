@@ -1,0 +1,685 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+17/12/09 12:11:51 INFO SparkContext: Running Spark version 1.5.2
+17/12/09 12:11:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/12/09 12:11:51 INFO SecurityManager: Changing view acls to: skamthe
+17/12/09 12:11:51 INFO SecurityManager: Changing modify acls to: skamthe
+17/12/09 12:11:51 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(skamthe); users with modify permissions: Set(skamthe)
+17/12/09 12:11:52 INFO Slf4jLogger: Slf4jLogger started
+17/12/09 12:11:52 INFO Remoting: Starting remoting
+17/12/09 12:11:53 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@198.202.114.159:44684]
+17/12/09 12:11:53 INFO Utils: Successfully started service 'sparkDriver' on port 44684.
+17/12/09 12:11:53 INFO SparkEnv: Registering MapOutputTracker
+17/12/09 12:11:53 INFO SparkEnv: Registering BlockManagerMaster
+17/12/09 12:11:53 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-6163fdef-47ac-4832-967a-e3f37d3172d1
+17/12/09 12:11:53 INFO MemoryStore: MemoryStore started with capacity 530.0 MB
+17/12/09 12:11:53 INFO HttpFileServer: HTTP File server directory is /tmp/spark-7ab5eda2-9daa-4cfe-ab84-2f7916556c03/httpd-527ea651-1c1b-4281-a7df-4d1d2114d640
+17/12/09 12:11:53 INFO HttpServer: Starting HTTP Server
+17/12/09 12:11:53 INFO Utils: Successfully started service 'HTTP file server' on port 41014.
+17/12/09 12:11:53 INFO SparkEnv: Registering OutputCommitCoordinator
+17/12/09 12:11:53 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+17/12/09 12:11:53 INFO SparkUI: Started SparkUI at http://198.202.114.159:4040
+17/12/09 12:11:53 INFO SparkContext: Added JAR file:/home/skamthe/project4/MovieRecommend2.jar at http://198.202.114.159:41014/jars/MovieRecommend2.jar with timestamp 1512850313628
+17/12/09 12:11:53 WARN MetricsSystem: Using default name DAGScheduler for source because spark.app.id is not set.
+17/12/09 12:11:53 INFO Executor: Starting executor ID driver on host localhost
+17/12/09 12:11:53 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41615.
+17/12/09 12:11:53 INFO NettyBlockTransferService: Server created on 41615
+17/12/09 12:11:53 INFO BlockManagerMaster: Trying to register BlockManager
+17/12/09 12:11:53 INFO BlockManagerMasterEndpoint: Registering block manager localhost:41615 with 530.0 MB RAM, BlockManagerId(driver, localhost, 41615)
+17/12/09 12:11:53 INFO BlockManagerMaster: Registered BlockManager
+17/12/09 12:11:55 INFO MemoryStore: ensureFreeSpace(120040) called with curMem=0, maxMem=555755765
+17/12/09 12:11:55 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 117.2 KB, free 529.9 MB)
+17/12/09 12:11:55 INFO MemoryStore: ensureFreeSpace(12673) called with curMem=120040, maxMem=555755765
+17/12/09 12:11:55 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 12.4 KB, free 529.9 MB)
+17/12/09 12:11:55 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:41615 (size: 12.4 KB, free: 530.0 MB)
+17/12/09 12:11:55 INFO SparkContext: Created broadcast 0 from textFile at MovieRecommend2.scala:91
+17/12/09 12:11:55 INFO MemoryStore: ensureFreeSpace(120080) called with curMem=132713, maxMem=555755765
+17/12/09 12:11:55 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 117.3 KB, free 529.8 MB)
+17/12/09 12:11:55 INFO MemoryStore: ensureFreeSpace(12673) called with curMem=252793, maxMem=555755765
+17/12/09 12:11:55 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 12.4 KB, free 529.8 MB)
+17/12/09 12:11:55 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:41615 (size: 12.4 KB, free: 530.0 MB)
+17/12/09 12:11:55 INFO SparkContext: Created broadcast 1 from textFile at MovieRecommend2.scala:97
+17/12/09 12:11:56 INFO FileInputFormat: Total input paths to process : 1
+17/12/09 12:11:56 INFO SparkContext: Starting job: collect at MovieRecommend2.scala:112
+17/12/09 12:11:56 INFO DAGScheduler: Registering RDD 10 (map at MovieRecommend2.scala:48)
+17/12/09 12:11:56 INFO DAGScheduler: Registering RDD 9 (map at MovieRecommend2.scala:47)
+17/12/09 12:11:56 INFO DAGScheduler: Registering RDD 14 (flatMap at MovieRecommend2.scala:49)
+17/12/09 12:11:56 INFO DAGScheduler: Got job 0 (collect at MovieRecommend2.scala:112) with 2 output partitions
+17/12/09 12:11:56 INFO DAGScheduler: Final stage: ResultStage 3(collect at MovieRecommend2.scala:112)
+17/12/09 12:11:56 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+17/12/09 12:11:56 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 2)
+17/12/09 12:11:56 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[10] at map at MovieRecommend2.scala:48), which has no missing parents
+17/12/09 12:11:56 INFO MemoryStore: ensureFreeSpace(4128) called with curMem=265466, maxMem=555755765
+17/12/09 12:11:56 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.0 KB, free 529.8 MB)
+17/12/09 12:11:56 INFO MemoryStore: ensureFreeSpace(2267) called with curMem=269594, maxMem=555755765
+17/12/09 12:11:56 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.2 KB, free 529.8 MB)
+17/12/09 12:11:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:41615 (size: 2.2 KB, free: 530.0 MB)
+17/12/09 12:11:56 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:861
+17/12/09 12:11:56 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[10] at map at MovieRecommend2.scala:48)
+17/12/09 12:11:56 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+17/12/09 12:11:56 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[9] at map at MovieRecommend2.scala:47), which has no missing parents
+17/12/09 12:11:56 INFO MemoryStore: ensureFreeSpace(4000) called with curMem=271861, maxMem=555755765
+17/12/09 12:11:56 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 3.9 KB, free 529.7 MB)
+17/12/09 12:11:56 INFO MemoryStore: ensureFreeSpace(2258) called with curMem=275861, maxMem=555755765
+17/12/09 12:11:56 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.2 KB, free 529.7 MB)
+17/12/09 12:11:56 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:41615 (size: 2.2 KB, free: 530.0 MB)
+17/12/09 12:11:56 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:861
+17/12/09 12:11:56 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[9] at map at MovieRecommend2.scala:47)
+17/12/09 12:11:56 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks
+17/12/09 12:11:56 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 2200 bytes)
+17/12/09 12:11:56 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, PROCESS_LOCAL, 2200 bytes)
+17/12/09 12:11:56 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+17/12/09 12:11:56 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+17/12/09 12:11:56 INFO Executor: Fetching http://198.202.114.159:41014/jars/MovieRecommend2.jar with timestamp 1512850313628
+17/12/09 12:11:56 INFO Utils: Fetching http://198.202.114.159:41014/jars/MovieRecommend2.jar to /tmp/spark-7ab5eda2-9daa-4cfe-ab84-2f7916556c03/userFiles-41094a02-6f6b-4b77-8e11-40f05a2f27b6/fetchFileTemp8947105368727366554.tmp
+17/12/09 12:11:56 INFO Executor: Adding file:/tmp/spark-7ab5eda2-9daa-4cfe-ab84-2f7916556c03/userFiles-41094a02-6f6b-4b77-8e11-40f05a2f27b6/MovieRecommend2.jar to class loader
+17/12/09 12:11:56 INFO CacheManager: Partition rdd_3_0 not found, computing it
+17/12/09 12:11:56 INFO HadoopRDD: Input split: file:/home/skamthe/project4/ratings.csv:0+1219133
+17/12/09 12:11:56 INFO CacheManager: Partition rdd_3_1 not found, computing it
+17/12/09 12:11:56 INFO HadoopRDD: Input split: file:/home/skamthe/project4/ratings.csv:1219133+1219133
+17/12/09 12:11:56 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+17/12/09 12:11:56 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+17/12/09 12:11:56 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+17/12/09 12:11:56 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+17/12/09 12:11:56 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+17/12/09 12:11:57 INFO MemoryStore: ensureFreeSpace(4776800) called with curMem=278119, maxMem=555755765
+17/12/09 12:11:57 INFO MemoryStore: Block rdd_3_0 stored as values in memory (estimated size 4.6 MB, free 525.2 MB)
+17/12/09 12:11:57 INFO BlockManagerInfo: Added rdd_3_0 in memory on localhost:41615 (size: 4.6 MB, free: 525.4 MB)
+17/12/09 12:11:57 INFO MemoryStore: ensureFreeSpace(4960304) called with curMem=5054919, maxMem=555755765
+17/12/09 12:11:57 INFO MemoryStore: Block rdd_3_1 stored as values in memory (estimated size 4.7 MB, free 520.5 MB)
+17/12/09 12:11:57 INFO BlockManagerInfo: Added rdd_3_1 in memory on localhost:41615 (size: 4.7 MB, free: 520.7 MB)
+17/12/09 12:11:58 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2834 bytes result sent to driver
+17/12/09 12:11:58 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2834 bytes result sent to driver
+17/12/09 12:11:58 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, localhost, PROCESS_LOCAL, 2200 bytes)
+17/12/09 12:11:58 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+17/12/09 12:11:58 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, localhost, PROCESS_LOCAL, 2200 bytes)
+17/12/09 12:11:58 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+17/12/09 12:11:58 INFO BlockManager: Found block rdd_3_1 locally
+17/12/09 12:11:58 INFO BlockManager: Found block rdd_3_0 locally
+17/12/09 12:11:58 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1823 ms on localhost (1/2)
+17/12/09 12:11:58 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1816 ms on localhost (2/2)
+17/12/09 12:11:58 INFO DAGScheduler: ShuffleMapStage 0 (map at MovieRecommend2.scala:48) finished in 1.854 s
+17/12/09 12:11:58 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:11:58 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+17/12/09 12:11:58 INFO DAGScheduler: running: Set(ShuffleMapStage 1)
+17/12/09 12:11:58 INFO DAGScheduler: waiting: Set(ShuffleMapStage 2, ResultStage 3)
+17/12/09 12:11:58 INFO DAGScheduler: failed: Set()
+17/12/09 12:11:58 INFO DAGScheduler: Missing parents for ShuffleMapStage 2: List(ShuffleMapStage 1)
+17/12/09 12:11:58 INFO DAGScheduler: Missing parents for ResultStage 3: List(ShuffleMapStage 2)
+17/12/09 12:11:58 INFO BlockManagerInfo: Removed broadcast_2_piece0 on localhost:41615 in memory (size: 2.2 KB, free: 520.7 MB)
+17/12/09 12:11:58 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 2254 bytes result sent to driver
+17/12/09 12:11:58 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 2254 bytes result sent to driver
+17/12/09 12:11:58 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 511 ms on localhost (1/2)
+17/12/09 12:11:58 INFO DAGScheduler: ShuffleMapStage 1 (map at MovieRecommend2.scala:47) finished in 2.248 s
+17/12/09 12:11:58 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:11:58 INFO DAGScheduler: running: Set()
+17/12/09 12:11:58 INFO DAGScheduler: waiting: Set(ShuffleMapStage 2, ResultStage 3)
+17/12/09 12:11:58 INFO DAGScheduler: failed: Set()
+17/12/09 12:11:58 INFO DAGScheduler: Missing parents for ShuffleMapStage 2: List()
+17/12/09 12:11:58 INFO DAGScheduler: Missing parents for ResultStage 3: List(ShuffleMapStage 2)
+17/12/09 12:11:58 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[14] at flatMap at MovieRecommend2.scala:49), which is now runnable
+17/12/09 12:11:58 INFO MemoryStore: ensureFreeSpace(3096) called with curMem=10008828, maxMem=555755765
+17/12/09 12:11:58 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 3.0 KB, free 520.5 MB)
+17/12/09 12:11:58 INFO MemoryStore: ensureFreeSpace(1670) called with curMem=10011924, maxMem=555755765
+17/12/09 12:11:58 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 1670.0 B, free 520.5 MB)
+17/12/09 12:11:58 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:41615 (size: 1670.0 B, free: 520.7 MB)
+17/12/09 12:11:58 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:861
+17/12/09 12:11:58 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[14] at flatMap at MovieRecommend2.scala:49)
+17/12/09 12:11:58 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks
+17/12/09 12:11:58 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 492 ms on localhost (2/2)
+17/12/09 12:11:58 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+17/12/09 12:11:58 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4, localhost, PROCESS_LOCAL, 2026 bytes)
+17/12/09 12:11:58 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5, localhost, PROCESS_LOCAL, 2026 bytes)
+17/12/09 12:11:58 INFO Executor: Running task 0.0 in stage 2.0 (TID 4)
+17/12/09 12:11:58 INFO Executor: Running task 1.0 in stage 2.0 (TID 5)
+17/12/09 12:11:58 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:11:58 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:11:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 12 ms
+17/12/09 12:11:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 18 ms
+17/12/09 12:11:58 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:11:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:11:58 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:11:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:12:00 INFO BlockManagerInfo: Removed broadcast_3_piece0 on localhost:41615 in memory (size: 2.2 KB, free: 520.7 MB)
+17/12/09 12:12:03 INFO ExternalSorter: Thread 80 spilling in-memory map of 78.1 MB to disk (1 time so far)
+17/12/09 12:12:03 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (1 time so far)
+17/12/09 12:12:09 INFO ExternalSorter: Thread 81 spilling in-memory map of 75.2 MB to disk (2 times so far)
+17/12/09 12:12:10 INFO ExternalSorter: Thread 80 spilling in-memory map of 80.6 MB to disk (2 times so far)
+17/12/09 12:12:16 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (3 times so far)
+17/12/09 12:12:16 INFO ExternalSorter: Thread 80 spilling in-memory map of 78.1 MB to disk (3 times so far)
+17/12/09 12:12:23 INFO ExternalSorter: Thread 81 spilling in-memory map of 71.4 MB to disk (4 times so far)
+17/12/09 12:12:25 INFO ExternalSorter: Thread 80 spilling in-memory map of 78.1 MB to disk (4 times so far)
+17/12/09 12:12:29 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (5 times so far)
+17/12/09 12:12:32 INFO ExternalSorter: Thread 80 spilling in-memory map of 79.4 MB to disk (5 times so far)
+17/12/09 12:12:34 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (6 times so far)
+17/12/09 12:12:40 INFO ExternalSorter: Thread 80 spilling in-memory map of 78.1 MB to disk (6 times so far)
+17/12/09 12:12:41 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (7 times so far)
+17/12/09 12:12:47 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (8 times so far)
+17/12/09 12:12:48 INFO ExternalSorter: Thread 80 spilling in-memory map of 78.1 MB to disk (7 times so far)
+17/12/09 12:12:52 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (9 times so far)
+17/12/09 12:12:54 INFO ExternalSorter: Thread 80 spilling in-memory map of 78.1 MB to disk (8 times so far)
+17/12/09 12:13:04 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.8 MB to disk (10 times so far)
+17/12/09 12:13:07 INFO ExternalSorter: Thread 80 spilling in-memory map of 78.1 MB to disk (9 times so far)
+17/12/09 12:13:10 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (11 times so far)
+17/12/09 12:13:14 INFO ExternalSorter: Thread 80 spilling in-memory map of 78.1 MB to disk (10 times so far)
+17/12/09 12:13:15 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (12 times so far)
+17/12/09 12:13:20 INFO ExternalSorter: Thread 81 spilling in-memory map of 69.0 MB to disk (13 times so far)
+17/12/09 12:13:23 INFO ExternalSorter: Thread 80 spilling in-memory map of 79.0 MB to disk (11 times so far)
+17/12/09 12:13:28 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (14 times so far)
+17/12/09 12:13:30 INFO ExternalSorter: Thread 80 spilling in-memory map of 78.1 MB to disk (12 times so far)
+17/12/09 12:13:33 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (15 times so far)
+17/12/09 12:13:37 INFO ExternalSorter: Thread 80 spilling in-memory map of 78.1 MB to disk (13 times so far)
+17/12/09 12:13:43 INFO ExternalSorter: Thread 81 spilling in-memory map of 68.5 MB to disk (16 times so far)
+17/12/09 12:14:28 INFO Executor: Finished task 1.0 in stage 2.0 (TID 5). 1375 bytes result sent to driver
+17/12/09 12:14:28 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 5) in 150269 ms on localhost (1/2)
+17/12/09 12:14:30 INFO Executor: Finished task 0.0 in stage 2.0 (TID 4). 1375 bytes result sent to driver
+17/12/09 12:14:30 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 151722 ms on localhost (2/2)
+17/12/09 12:14:30 INFO DAGScheduler: ShuffleMapStage 2 (flatMap at MovieRecommend2.scala:49) finished in 151.721 s
+17/12/09 12:14:30 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+17/12/09 12:14:30 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:14:30 INFO DAGScheduler: running: Set()
+17/12/09 12:14:30 INFO DAGScheduler: waiting: Set(ResultStage 3)
+17/12/09 12:14:30 INFO DAGScheduler: failed: Set()
+17/12/09 12:14:30 INFO DAGScheduler: Missing parents for ResultStage 3: List()
+17/12/09 12:14:30 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[17] at map at MovieRecommend2.scala:111), which is now runnable
+17/12/09 12:14:30 INFO MemoryStore: ensureFreeSpace(2960) called with curMem=10007336, maxMem=555755765
+17/12/09 12:14:30 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 2.9 KB, free 520.5 MB)
+17/12/09 12:14:30 INFO MemoryStore: ensureFreeSpace(1657) called with curMem=10010296, maxMem=555755765
+17/12/09 12:14:30 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 1657.0 B, free 520.5 MB)
+17/12/09 12:14:30 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:41615 (size: 1657.0 B, free: 520.7 MB)
+17/12/09 12:14:30 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:861
+17/12/09 12:14:30 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 3 (MapPartitionsRDD[17] at map at MovieRecommend2.scala:111)
+17/12/09 12:14:30 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks
+17/12/09 12:14:30 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 6, localhost, PROCESS_LOCAL, 1964 bytes)
+17/12/09 12:14:30 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 7, localhost, PROCESS_LOCAL, 1964 bytes)
+17/12/09 12:14:30 INFO Executor: Running task 1.0 in stage 3.0 (TID 7)
+17/12/09 12:14:30 INFO CacheManager: Partition rdd_15_1 not found, computing it
+17/12/09 12:14:30 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:14:30 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:14:30 INFO Executor: Running task 0.0 in stage 3.0 (TID 6)
+17/12/09 12:14:30 INFO CacheManager: Partition rdd_15_0 not found, computing it
+17/12/09 12:14:30 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:14:30 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:14:33 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 83.5 MB to disk (1 time so far)
+17/12/09 12:14:33 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 83.8 MB to disk (1 time so far)
+17/12/09 12:14:44 INFO BlockManagerInfo: Removed broadcast_4_piece0 on localhost:41615 in memory (size: 1670.0 B, free: 520.7 MB)
+17/12/09 12:14:44 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 83.5 MB to disk (2 times so far)
+17/12/09 12:14:45 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 84.5 MB to disk (2 times so far)
+17/12/09 12:14:53 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 85.1 MB to disk (3 times so far)
+17/12/09 12:14:54 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 83.5 MB to disk (3 times so far)
+17/12/09 12:15:03 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 83.5 MB to disk (4 times so far)
+17/12/09 12:15:10 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 83.5 MB to disk (4 times so far)
+17/12/09 12:15:15 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 85.4 MB to disk (5 times so far)
+17/12/09 12:15:20 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 83.5 MB to disk (5 times so far)
+17/12/09 12:15:26 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 83.5 MB to disk (6 times so far)
+17/12/09 12:15:31 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 84.5 MB to disk (6 times so far)
+17/12/09 12:15:53 WARN MemoryStore: Not enough space to cache rdd_15_0 in memory! (computed 235.8 MB so far)
+17/12/09 12:15:53 INFO MemoryStore: Memory use = 9.5 MB (blocks) + 471.6 MB (scratch space shared across 2 tasks(s)) = 481.1 MB. Storage limit = 530.0 MB.
+17/12/09 12:16:01 WARN MemoryStore: Not enough space to cache rdd_15_1 in memory! (computed 235.8 MB so far)
+17/12/09 12:16:01 INFO MemoryStore: Memory use = 9.5 MB (blocks) + 471.6 MB (scratch space shared across 2 tasks(s)) = 481.1 MB. Storage limit = 530.0 MB.
+17/12/09 12:16:08 INFO Executor: Finished task 0.0 in stage 3.0 (TID 6). 110000 bytes result sent to driver
+17/12/09 12:16:08 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 6) in 98077 ms on localhost (1/2)
+17/12/09 12:16:10 INFO Executor: Finished task 1.0 in stage 3.0 (TID 7). 111303 bytes result sent to driver
+17/12/09 12:16:10 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 7) in 100133 ms on localhost (2/2)
+17/12/09 12:16:10 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+17/12/09 12:16:10 INFO DAGScheduler: ResultStage 3 (collect at MovieRecommend2.scala:112) finished in 100.124 s
+17/12/09 12:16:10 INFO DAGScheduler: Job 0 finished: collect at MovieRecommend2.scala:112, took 254.323806 s
+17/12/09 12:16:10 INFO MemoryStore: ensureFreeSpace(1220864) called with curMem=10007187, maxMem=555755765
+17/12/09 12:16:10 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 1192.3 KB, free 519.3 MB)
+17/12/09 12:16:10 INFO MemoryStore: ensureFreeSpace(105457) called with curMem=11228051, maxMem=555755765
+17/12/09 12:16:10 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 103.0 KB, free 519.2 MB)
+17/12/09 12:16:10 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on localhost:41615 (size: 103.0 KB, free: 520.6 MB)
+17/12/09 12:16:10 INFO SparkContext: Created broadcast 6 from broadcast at MovieRecommend2.scala:115
+17/12/09 12:16:10 INFO FileInputFormat: Total input paths to process : 1
+17/12/09 12:16:10 INFO SparkContext: Starting job: saveAsTextFile at MovieRecommend2.scala:191
+17/12/09 12:16:10 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 155 bytes
+17/12/09 12:16:10 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 155 bytes
+17/12/09 12:16:10 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 2 is 155 bytes
+17/12/09 12:16:10 INFO DAGScheduler: Registering RDD 24 (map at MovieRecommend2.scala:64)
+17/12/09 12:16:10 INFO DAGScheduler: Registering RDD 23 (map at MovieRecommend2.scala:63)
+17/12/09 12:16:10 INFO DAGScheduler: Registering RDD 28 (map at MovieRecommend2.scala:65)
+17/12/09 12:16:10 INFO DAGScheduler: Registering RDD 22 (map at MovieRecommend2.scala:145)
+17/12/09 12:16:10 INFO DAGScheduler: Registering RDD 35 (map at MovieRecommend2.scala:158)
+17/12/09 12:16:10 INFO DAGScheduler: Registering RDD 40 (map at MovieRecommend2.scala:177)
+17/12/09 12:16:10 INFO DAGScheduler: Registering RDD 39 (map at MovieRecommend2.scala:175)
+17/12/09 12:16:10 INFO DAGScheduler: Registering RDD 44 (map at MovieRecommend2.scala:179)
+17/12/09 12:16:10 INFO DAGScheduler: Got job 1 (saveAsTextFile at MovieRecommend2.scala:191) with 2 output partitions
+17/12/09 12:16:10 INFO DAGScheduler: Final stage: ResultStage 15(saveAsTextFile at MovieRecommend2.scala:191)
+17/12/09 12:16:10 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 14)
+17/12/09 12:16:10 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 14)
+17/12/09 12:16:10 INFO DAGScheduler: Submitting ShuffleMapStage 7 (MapPartitionsRDD[24] at map at MovieRecommend2.scala:64), which has no missing parents
+17/12/09 12:16:10 INFO MemoryStore: ensureFreeSpace(3696) called with curMem=11333508, maxMem=555755765
+17/12/09 12:16:10 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 3.6 KB, free 519.2 MB)
+17/12/09 12:16:10 INFO MemoryStore: ensureFreeSpace(1980) called with curMem=11337204, maxMem=555755765
+17/12/09 12:16:10 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 1980.0 B, free 519.2 MB)
+17/12/09 12:16:10 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on localhost:41615 (size: 1980.0 B, free: 520.6 MB)
+17/12/09 12:16:10 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:861
+17/12/09 12:16:10 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 7 (MapPartitionsRDD[24] at map at MovieRecommend2.scala:64)
+17/12/09 12:16:10 INFO TaskSchedulerImpl: Adding task set 7.0 with 2 tasks
+17/12/09 12:16:10 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 8, localhost, PROCESS_LOCAL, 1953 bytes)
+17/12/09 12:16:10 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 9, localhost, PROCESS_LOCAL, 1953 bytes)
+17/12/09 12:16:10 INFO Executor: Running task 1.0 in stage 7.0 (TID 9)
+17/12/09 12:16:10 INFO Executor: Running task 0.0 in stage 7.0 (TID 8)
+17/12/09 12:16:10 INFO CacheManager: Partition rdd_15_1 not found, computing it
+17/12/09 12:16:10 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:16:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:16:10 INFO CacheManager: Partition rdd_15_0 not found, computing it
+17/12/09 12:16:10 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:16:10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:16:11 INFO DAGScheduler: Submitting ShuffleMapStage 8 (MapPartitionsRDD[23] at map at MovieRecommend2.scala:63), which has no missing parents
+17/12/09 12:16:11 INFO MemoryStore: ensureFreeSpace(4488) called with curMem=11339184, maxMem=555755765
+17/12/09 12:16:11 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 4.4 KB, free 519.2 MB)
+17/12/09 12:16:11 INFO MemoryStore: ensureFreeSpace(2366) called with curMem=11343672, maxMem=555755765
+17/12/09 12:16:11 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 2.3 KB, free 519.2 MB)
+17/12/09 12:16:11 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on localhost:41615 (size: 2.3 KB, free: 520.6 MB)
+17/12/09 12:16:11 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:861
+17/12/09 12:16:11 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 8 (MapPartitionsRDD[23] at map at MovieRecommend2.scala:63)
+17/12/09 12:16:11 INFO TaskSchedulerImpl: Adding task set 8.0 with 2 tasks
+17/12/09 12:16:11 INFO DAGScheduler: Submitting ShuffleMapStage 10 (MapPartitionsRDD[22] at map at MovieRecommend2.scala:145), which has no missing parents
+17/12/09 12:16:11 INFO MemoryStore: ensureFreeSpace(4360) called with curMem=11346038, maxMem=555755765
+17/12/09 12:16:11 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 4.3 KB, free 519.2 MB)
+17/12/09 12:16:11 INFO MemoryStore: ensureFreeSpace(2344) called with curMem=11350398, maxMem=555755765
+17/12/09 12:16:11 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 2.3 KB, free 519.2 MB)
+17/12/09 12:16:11 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on localhost:41615 (size: 2.3 KB, free: 520.6 MB)
+17/12/09 12:16:11 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:861
+17/12/09 12:16:11 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[22] at map at MovieRecommend2.scala:145)
+17/12/09 12:16:11 INFO TaskSchedulerImpl: Adding task set 10.0 with 2 tasks
+17/12/09 12:16:11 INFO DAGScheduler: Submitting ShuffleMapStage 13 (MapPartitionsRDD[39] at map at MovieRecommend2.scala:175), which has no missing parents
+17/12/09 12:16:11 INFO MemoryStore: ensureFreeSpace(3944) called with curMem=11352742, maxMem=555755765
+17/12/09 12:16:11 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 3.9 KB, free 519.2 MB)
+17/12/09 12:16:11 INFO MemoryStore: ensureFreeSpace(2197) called with curMem=11356686, maxMem=555755765
+17/12/09 12:16:11 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 2.1 KB, free 519.2 MB)
+17/12/09 12:16:11 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on localhost:41615 (size: 2.1 KB, free: 520.6 MB)
+17/12/09 12:16:11 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:861
+17/12/09 12:16:11 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 13 (MapPartitionsRDD[39] at map at MovieRecommend2.scala:175)
+17/12/09 12:16:11 INFO TaskSchedulerImpl: Adding task set 13.0 with 2 tasks
+17/12/09 12:16:13 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 83.5 MB to disk (1 time so far)
+17/12/09 12:16:15 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 83.8 MB to disk (1 time so far)
+17/12/09 12:16:23 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 83.5 MB to disk (2 times so far)
+17/12/09 12:16:28 INFO ContextCleaner: Cleaned accumulator 4
+17/12/09 12:16:28 INFO ContextCleaner: Cleaned accumulator 3
+17/12/09 12:16:28 INFO ContextCleaner: Cleaned accumulator 2
+17/12/09 12:16:28 INFO ContextCleaner: Cleaned accumulator 1
+17/12/09 12:16:28 INFO BlockManagerInfo: Removed broadcast_5_piece0 on localhost:41615 in memory (size: 1657.0 B, free: 520.6 MB)
+17/12/09 12:16:28 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 84.5 MB to disk (2 times so far)
+17/12/09 12:16:36 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 85.1 MB to disk (3 times so far)
+17/12/09 12:16:37 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 83.5 MB to disk (3 times so far)
+17/12/09 12:16:46 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 83.5 MB to disk (4 times so far)
+17/12/09 12:16:48 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 83.5 MB to disk (4 times so far)
+17/12/09 12:16:59 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 83.5 MB to disk (5 times so far)
+17/12/09 12:17:01 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 85.4 MB to disk (5 times so far)
+17/12/09 12:17:09 INFO ExternalAppendOnlyMap: Thread 80 spilling in-memory map of 83.5 MB to disk (6 times so far)
+17/12/09 12:17:11 INFO ExternalAppendOnlyMap: Thread 81 spilling in-memory map of 84.5 MB to disk (6 times so far)
+17/12/09 12:17:36 WARN MemoryStore: Not enough space to cache rdd_15_1 in memory! (computed 235.8 MB so far)
+17/12/09 12:17:36 INFO MemoryStore: Memory use = 10.8 MB (blocks) + 471.6 MB (scratch space shared across 2 tasks(s)) = 482.4 MB. Storage limit = 530.0 MB.
+17/12/09 12:17:37 WARN MemoryStore: Not enough space to cache rdd_15_0 in memory! (computed 235.8 MB so far)
+17/12/09 12:17:37 INFO MemoryStore: Memory use = 10.8 MB (blocks) + 471.6 MB (scratch space shared across 2 tasks(s)) = 482.4 MB. Storage limit = 530.0 MB.
+17/12/09 12:17:52 INFO Executor: Finished task 0.0 in stage 7.0 (TID 8). 1424 bytes result sent to driver
+17/12/09 12:17:52 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 10, localhost, PROCESS_LOCAL, 2200 bytes)
+17/12/09 12:17:52 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 8) in 101427 ms on localhost (1/2)
+17/12/09 12:17:52 INFO Executor: Running task 0.0 in stage 8.0 (TID 10)
+17/12/09 12:17:52 INFO BlockManager: Found block rdd_3_0 locally
+17/12/09 12:17:52 INFO Executor: Finished task 0.0 in stage 8.0 (TID 10). 2254 bytes result sent to driver
+17/12/09 12:17:52 INFO TaskSetManager: Starting task 1.0 in stage 8.0 (TID 11, localhost, PROCESS_LOCAL, 2200 bytes)
+17/12/09 12:17:52 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 10) in 29 ms on localhost (1/2)
+17/12/09 12:17:52 INFO Executor: Running task 1.0 in stage 8.0 (TID 11)
+17/12/09 12:17:52 INFO BlockManager: Found block rdd_3_1 locally
+17/12/09 12:17:52 INFO Executor: Finished task 1.0 in stage 8.0 (TID 11). 2254 bytes result sent to driver
+17/12/09 12:17:52 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 12, localhost, PROCESS_LOCAL, 2200 bytes)
+17/12/09 12:17:52 INFO TaskSetManager: Finished task 1.0 in stage 8.0 (TID 11) in 19 ms on localhost (2/2)
+17/12/09 12:17:52 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+17/12/09 12:17:52 INFO DAGScheduler: ShuffleMapStage 8 (map at MovieRecommend2.scala:63) finished in 101.436 s
+17/12/09 12:17:52 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:17:52 INFO DAGScheduler: running: Set(ShuffleMapStage 13, ShuffleMapStage 10, ShuffleMapStage 7)
+17/12/09 12:17:52 INFO DAGScheduler: waiting: Set(ResultStage 15, ShuffleMapStage 12, ShuffleMapStage 9, ShuffleMapStage 14, ShuffleMapStage 11)
+17/12/09 12:17:52 INFO DAGScheduler: failed: Set()
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ResultStage 15: List(ShuffleMapStage 14)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List(ShuffleMapStage 7)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9, ShuffleMapStage 10)
+17/12/09 12:17:52 INFO Executor: Running task 0.0 in stage 10.0 (TID 12)
+17/12/09 12:17:52 INFO BlockManager: Found block rdd_3_0 locally
+17/12/09 12:17:52 INFO Executor: Finished task 0.0 in stage 10.0 (TID 12). 2254 bytes result sent to driver
+17/12/09 12:17:52 INFO TaskSetManager: Starting task 1.0 in stage 10.0 (TID 13, localhost, PROCESS_LOCAL, 2200 bytes)
+17/12/09 12:17:52 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 12) in 19 ms on localhost (1/2)
+17/12/09 12:17:52 INFO Executor: Running task 1.0 in stage 10.0 (TID 13)
+17/12/09 12:17:52 INFO BlockManager: Found block rdd_3_1 locally
+17/12/09 12:17:52 INFO Executor: Finished task 1.0 in stage 10.0 (TID 13). 2254 bytes result sent to driver
+17/12/09 12:17:52 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 14, localhost, PROCESS_LOCAL, 2199 bytes)
+17/12/09 12:17:52 INFO TaskSetManager: Finished task 1.0 in stage 10.0 (TID 13) in 14 ms on localhost (2/2)
+17/12/09 12:17:52 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+17/12/09 12:17:52 INFO DAGScheduler: ShuffleMapStage 10 (map at MovieRecommend2.scala:145) finished in 101.465 s
+17/12/09 12:17:52 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:17:52 INFO DAGScheduler: running: Set(ShuffleMapStage 13, ShuffleMapStage 7)
+17/12/09 12:17:52 INFO DAGScheduler: waiting: Set(ResultStage 15, ShuffleMapStage 12, ShuffleMapStage 9, ShuffleMapStage 14, ShuffleMapStage 11)
+17/12/09 12:17:52 INFO DAGScheduler: failed: Set()
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ResultStage 15: List(ShuffleMapStage 14)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List(ShuffleMapStage 7)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9)
+17/12/09 12:17:52 INFO Executor: Running task 0.0 in stage 13.0 (TID 14)
+17/12/09 12:17:52 INFO HadoopRDD: Input split: file:/home/skamthe/project4/movies.csv:0+229195
+17/12/09 12:17:52 INFO Executor: Finished task 0.0 in stage 13.0 (TID 14). 2254 bytes result sent to driver
+17/12/09 12:17:52 INFO TaskSetManager: Starting task 1.0 in stage 13.0 (TID 15, localhost, PROCESS_LOCAL, 2199 bytes)
+17/12/09 12:17:52 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 14) in 149 ms on localhost (1/2)
+17/12/09 12:17:52 INFO Executor: Running task 1.0 in stage 13.0 (TID 15)
+17/12/09 12:17:52 INFO HadoopRDD: Input split: file:/home/skamthe/project4/movies.csv:229195+229195
+17/12/09 12:17:52 INFO Executor: Finished task 1.0 in stage 13.0 (TID 15). 2254 bytes result sent to driver
+17/12/09 12:17:52 INFO TaskSetManager: Finished task 1.0 in stage 13.0 (TID 15) in 201 ms on localhost (2/2)
+17/12/09 12:17:52 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+17/12/09 12:17:52 INFO DAGScheduler: ShuffleMapStage 13 (map at MovieRecommend2.scala:175) finished in 101.801 s
+17/12/09 12:17:52 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:17:52 INFO DAGScheduler: running: Set(ShuffleMapStage 7)
+17/12/09 12:17:52 INFO DAGScheduler: waiting: Set(ResultStage 15, ShuffleMapStage 12, ShuffleMapStage 9, ShuffleMapStage 14, ShuffleMapStage 11)
+17/12/09 12:17:52 INFO DAGScheduler: failed: Set()
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ResultStage 15: List(ShuffleMapStage 14)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List(ShuffleMapStage 7)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12)
+17/12/09 12:17:52 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9)
+17/12/09 12:17:53 INFO Executor: Finished task 1.0 in stage 7.0 (TID 9). 1424 bytes result sent to driver
+17/12/09 12:17:53 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 9) in 102119 ms on localhost (2/2)
+17/12/09 12:17:53 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+17/12/09 12:17:53 INFO DAGScheduler: ShuffleMapStage 7 (map at MovieRecommend2.scala:64) finished in 102.100 s
+17/12/09 12:17:53 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:17:53 INFO DAGScheduler: running: Set()
+17/12/09 12:17:53 INFO DAGScheduler: waiting: Set(ResultStage 15, ShuffleMapStage 12, ShuffleMapStage 9, ShuffleMapStage 14, ShuffleMapStage 11)
+17/12/09 12:17:53 INFO DAGScheduler: failed: Set()
+17/12/09 12:17:53 INFO DAGScheduler: Missing parents for ResultStage 15: List(ShuffleMapStage 14)
+17/12/09 12:17:53 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+17/12/09 12:17:53 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List()
+17/12/09 12:17:53 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12)
+17/12/09 12:17:53 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9)
+17/12/09 12:17:53 INFO DAGScheduler: Submitting ShuffleMapStage 9 (MapPartitionsRDD[28] at map at MovieRecommend2.scala:65), which is now runnable
+17/12/09 12:17:53 INFO MemoryStore: ensureFreeSpace(3088) called with curMem=11354266, maxMem=555755765
+17/12/09 12:17:53 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 3.0 KB, free 519.2 MB)
+17/12/09 12:17:53 INFO MemoryStore: ensureFreeSpace(1675) called with curMem=11357354, maxMem=555755765
+17/12/09 12:17:53 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 1675.0 B, free 519.2 MB)
+17/12/09 12:17:53 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:41615 (size: 1675.0 B, free: 520.6 MB)
+17/12/09 12:17:53 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:861
+17/12/09 12:17:53 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[28] at map at MovieRecommend2.scala:65)
+17/12/09 12:17:53 INFO TaskSchedulerImpl: Adding task set 9.0 with 2 tasks
+17/12/09 12:17:53 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 16, localhost, PROCESS_LOCAL, 2026 bytes)
+17/12/09 12:17:53 INFO TaskSetManager: Starting task 1.0 in stage 9.0 (TID 17, localhost, PROCESS_LOCAL, 2026 bytes)
+17/12/09 12:17:53 INFO Executor: Running task 0.0 in stage 9.0 (TID 16)
+17/12/09 12:17:53 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/12/09 12:17:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:53 INFO Executor: Running task 1.0 in stage 9.0 (TID 17)
+17/12/09 12:17:53 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/12/09 12:17:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO Executor: Finished task 0.0 in stage 9.0 (TID 16). 1375 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 16) in 2003 ms on localhost (1/2)
+17/12/09 12:17:55 INFO Executor: Finished task 1.0 in stage 9.0 (TID 17). 1375 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 1.0 in stage 9.0 (TID 17) in 2237 ms on localhost (2/2)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+17/12/09 12:17:55 INFO DAGScheduler: ShuffleMapStage 9 (map at MovieRecommend2.scala:65) finished in 2.238 s
+17/12/09 12:17:55 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:17:55 INFO DAGScheduler: running: Set()
+17/12/09 12:17:55 INFO DAGScheduler: waiting: Set(ResultStage 15, ShuffleMapStage 12, ShuffleMapStage 14, ShuffleMapStage 11)
+17/12/09 12:17:55 INFO DAGScheduler: failed: Set()
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ResultStage 15: List(ShuffleMapStage 14)
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12)
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List()
+17/12/09 12:17:55 INFO DAGScheduler: Submitting ShuffleMapStage 11 (MapPartitionsRDD[35] at map at MovieRecommend2.scala:158), which is now runnable
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(4648) called with curMem=11359029, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 4.5 KB, free 519.2 MB)
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(2210) called with curMem=11363677, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 2.2 KB, free 519.2 MB)
+17/12/09 12:17:55 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on localhost:41615 (size: 2.2 KB, free: 520.6 MB)
+17/12/09 12:17:55 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:861
+17/12/09 12:17:55 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 11 (MapPartitionsRDD[35] at map at MovieRecommend2.scala:158)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Adding task set 11.0 with 2 tasks
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 18, localhost, PROCESS_LOCAL, 2180 bytes)
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 1.0 in stage 11.0 (TID 19, localhost, PROCESS_LOCAL, 2180 bytes)
+17/12/09 12:17:55 INFO Executor: Running task 0.0 in stage 11.0 (TID 18)
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO Executor: Running task 1.0 in stage 11.0 (TID 19)
+17/12/09 12:17:55 INFO Executor: Finished task 0.0 in stage 11.0 (TID 18). 1375 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 18) in 12 ms on localhost (1/2)
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+17/12/09 12:17:55 INFO Executor: Finished task 1.0 in stage 11.0 (TID 19). 1375 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 1.0 in stage 11.0 (TID 19) in 49 ms on localhost (2/2)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+17/12/09 12:17:55 INFO DAGScheduler: ShuffleMapStage 11 (map at MovieRecommend2.scala:158) finished in 0.061 s
+17/12/09 12:17:55 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:17:55 INFO DAGScheduler: running: Set()
+17/12/09 12:17:55 INFO DAGScheduler: waiting: Set(ResultStage 15, ShuffleMapStage 12, ShuffleMapStage 14)
+17/12/09 12:17:55 INFO DAGScheduler: failed: Set()
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ResultStage 15: List(ShuffleMapStage 14)
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List()
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12)
+17/12/09 12:17:55 INFO DAGScheduler: Submitting ShuffleMapStage 12 (MapPartitionsRDD[40] at map at MovieRecommend2.scala:177), which is now runnable
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(5248) called with curMem=11365887, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 5.1 KB, free 519.2 MB)
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(2363) called with curMem=11371135, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 2.3 KB, free 519.2 MB)
+17/12/09 12:17:55 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on localhost:41615 (size: 2.3 KB, free: 520.6 MB)
+17/12/09 12:17:55 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:861
+17/12/09 12:17:55 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 12 (MapPartitionsRDD[40] at map at MovieRecommend2.scala:177)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Adding task set 12.0 with 2 tasks
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 20, localhost, PROCESS_LOCAL, 1953 bytes)
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 21, localhost, PROCESS_LOCAL, 1953 bytes)
+17/12/09 12:17:55 INFO Executor: Running task 0.0 in stage 12.0 (TID 20)
+17/12/09 12:17:55 INFO Executor: Running task 1.0 in stage 12.0 (TID 21)
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+17/12/09 12:17:55 INFO Executor: Finished task 1.0 in stage 12.0 (TID 21). 1375 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 1.0 in stage 12.0 (TID 21) in 5 ms on localhost (1/2)
+17/12/09 12:17:55 INFO Executor: Finished task 0.0 in stage 12.0 (TID 20). 1375 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 20) in 7 ms on localhost (2/2)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+17/12/09 12:17:55 INFO DAGScheduler: ShuffleMapStage 12 (map at MovieRecommend2.scala:177) finished in 0.008 s
+17/12/09 12:17:55 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:17:55 INFO DAGScheduler: running: Set()
+17/12/09 12:17:55 INFO DAGScheduler: waiting: Set(ResultStage 15, ShuffleMapStage 14)
+17/12/09 12:17:55 INFO DAGScheduler: failed: Set()
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ResultStage 15: List(ShuffleMapStage 14)
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List()
+17/12/09 12:17:55 INFO DAGScheduler: Submitting ShuffleMapStage 14 (MapPartitionsRDD[44] at map at MovieRecommend2.scala:179), which is now runnable
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(3952) called with curMem=11373498, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 3.9 KB, free 519.2 MB)
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(2025) called with curMem=11377450, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 2025.0 B, free 519.2 MB)
+17/12/09 12:17:55 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on localhost:41615 (size: 2025.0 B, free: 520.6 MB)
+17/12/09 12:17:55 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:861
+17/12/09 12:17:55 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 14 (MapPartitionsRDD[44] at map at MovieRecommend2.scala:179)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Adding task set 14.0 with 2 tasks
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 0.0 in stage 14.0 (TID 22, localhost, PROCESS_LOCAL, 2026 bytes)
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 1.0 in stage 14.0 (TID 23, localhost, PROCESS_LOCAL, 2026 bytes)
+17/12/09 12:17:55 INFO Executor: Running task 0.0 in stage 14.0 (TID 22)
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO Executor: Running task 1.0 in stage 14.0 (TID 23)
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO Executor: Finished task 0.0 in stage 14.0 (TID 22). 1375 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 0.0 in stage 14.0 (TID 22) in 50 ms on localhost (1/2)
+17/12/09 12:17:55 INFO Executor: Finished task 1.0 in stage 14.0 (TID 23). 1375 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 1.0 in stage 14.0 (TID 23) in 69 ms on localhost (2/2)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Removed TaskSet 14.0, whose tasks have all completed, from pool 
+17/12/09 12:17:55 INFO DAGScheduler: ShuffleMapStage 14 (map at MovieRecommend2.scala:179) finished in 0.070 s
+17/12/09 12:17:55 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:17:55 INFO DAGScheduler: running: Set()
+17/12/09 12:17:55 INFO DAGScheduler: waiting: Set(ResultStage 15)
+17/12/09 12:17:55 INFO DAGScheduler: failed: Set()
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ResultStage 15: List()
+17/12/09 12:17:55 INFO DAGScheduler: Submitting ResultStage 15 (MapPartitionsRDD[47] at saveAsTextFile at MovieRecommend2.scala:191), which is now runnable
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(114584) called with curMem=11379475, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 111.9 KB, free 519.0 MB)
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(38644) called with curMem=11494059, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 37.7 KB, free 519.0 MB)
+17/12/09 12:17:55 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on localhost:41615 (size: 37.7 KB, free: 520.5 MB)
+17/12/09 12:17:55 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:861
+17/12/09 12:17:55 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 15 (MapPartitionsRDD[47] at saveAsTextFile at MovieRecommend2.scala:191)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Adding task set 15.0 with 2 tasks
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 24, localhost, PROCESS_LOCAL, 1964 bytes)
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 1.0 in stage 15.0 (TID 25, localhost, PROCESS_LOCAL, 1964 bytes)
+17/12/09 12:17:55 INFO Executor: Running task 0.0 in stage 15.0 (TID 24)
+17/12/09 12:17:55 INFO Executor: Running task 1.0 in stage 15.0 (TID 25)
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO FileOutputCommitter: Saved output of task 'attempt_201712091216_0015_m_000001_25' to file:/home/skamthe/project4/recommendation/_temporary/0/task_201712091216_0015_m_000001
+17/12/09 12:17:55 INFO SparkHadoopMapRedUtil: attempt_201712091216_0015_m_000001_25: Committed
+17/12/09 12:17:55 INFO Executor: Finished task 1.0 in stage 15.0 (TID 25). 1165 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 1.0 in stage 15.0 (TID 25) in 152 ms on localhost (1/2)
+17/12/09 12:17:55 INFO FileOutputCommitter: Saved output of task 'attempt_201712091216_0015_m_000000_24' to file:/home/skamthe/project4/recommendation/_temporary/0/task_201712091216_0015_m_000000
+17/12/09 12:17:55 INFO SparkHadoopMapRedUtil: attempt_201712091216_0015_m_000000_24: Committed
+17/12/09 12:17:55 INFO Executor: Finished task 0.0 in stage 15.0 (TID 24). 1165 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 24) in 157 ms on localhost (2/2)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Removed TaskSet 15.0, whose tasks have all completed, from pool 
+17/12/09 12:17:55 INFO DAGScheduler: ResultStage 15 (saveAsTextFile at MovieRecommend2.scala:191) finished in 0.150 s
+17/12/09 12:17:55 INFO DAGScheduler: Job 1 finished: saveAsTextFile at MovieRecommend2.scala:191, took 104.760873 s
+17/12/09 12:17:55 INFO SparkContext: Starting job: saveAsTextFile at MovieRecommend2.scala:209
+17/12/09 12:17:55 INFO DAGScheduler: Registering RDD 49 (map at MovieRecommend2.scala:195)
+17/12/09 12:17:55 INFO DAGScheduler: Registering RDD 48 (map at MovieRecommend2.scala:193)
+17/12/09 12:17:55 INFO DAGScheduler: Registering RDD 53 (map at MovieRecommend2.scala:197)
+17/12/09 12:17:55 INFO DAGScheduler: Got job 2 (saveAsTextFile at MovieRecommend2.scala:209) with 2 output partitions
+17/12/09 12:17:55 INFO DAGScheduler: Final stage: ResultStage 19(saveAsTextFile at MovieRecommend2.scala:209)
+17/12/09 12:17:55 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 18)
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 18)
+17/12/09 12:17:55 INFO DAGScheduler: Submitting ShuffleMapStage 16 (MapPartitionsRDD[49] at map at MovieRecommend2.scala:195), which has no missing parents
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(4488) called with curMem=11532703, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 4.4 KB, free 519.0 MB)
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(2362) called with curMem=11537191, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 2.3 KB, free 519.0 MB)
+17/12/09 12:17:55 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:41615 (size: 2.3 KB, free: 520.5 MB)
+17/12/09 12:17:55 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:861
+17/12/09 12:17:55 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 16 (MapPartitionsRDD[49] at map at MovieRecommend2.scala:195)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Adding task set 16.0 with 2 tasks
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 0.0 in stage 16.0 (TID 26, localhost, PROCESS_LOCAL, 2200 bytes)
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 1.0 in stage 16.0 (TID 27, localhost, PROCESS_LOCAL, 2200 bytes)
+17/12/09 12:17:55 INFO Executor: Running task 0.0 in stage 16.0 (TID 26)
+17/12/09 12:17:55 INFO DAGScheduler: Submitting ShuffleMapStage 17 (MapPartitionsRDD[48] at map at MovieRecommend2.scala:193), which has no missing parents
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(3944) called with curMem=11539553, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 3.9 KB, free 519.0 MB)
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(2199) called with curMem=11543497, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 2.1 KB, free 519.0 MB)
+17/12/09 12:17:55 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on localhost:41615 (size: 2.1 KB, free: 520.5 MB)
+17/12/09 12:17:55 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:861
+17/12/09 12:17:55 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 17 (MapPartitionsRDD[48] at map at MovieRecommend2.scala:193)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Adding task set 17.0 with 2 tasks
+17/12/09 12:17:55 INFO BlockManager: Found block rdd_3_0 locally
+17/12/09 12:17:55 INFO Executor: Running task 1.0 in stage 16.0 (TID 27)
+17/12/09 12:17:55 INFO BlockManager: Found block rdd_3_1 locally
+17/12/09 12:17:55 INFO Executor: Finished task 1.0 in stage 16.0 (TID 27). 2254 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 0.0 in stage 17.0 (TID 28, localhost, PROCESS_LOCAL, 2199 bytes)
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 1.0 in stage 16.0 (TID 27) in 17 ms on localhost (1/2)
+17/12/09 12:17:55 INFO Executor: Running task 0.0 in stage 17.0 (TID 28)
+17/12/09 12:17:55 INFO HadoopRDD: Input split: file:/home/skamthe/project4/movies.csv:0+229195
+17/12/09 12:17:55 INFO Executor: Finished task 0.0 in stage 16.0 (TID 26). 2254 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 1.0 in stage 17.0 (TID 29, localhost, PROCESS_LOCAL, 2199 bytes)
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 0.0 in stage 16.0 (TID 26) in 29 ms on localhost (2/2)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Removed TaskSet 16.0, whose tasks have all completed, from pool 
+17/12/09 12:17:55 INFO DAGScheduler: ShuffleMapStage 16 (map at MovieRecommend2.scala:195) finished in 0.031 s
+17/12/09 12:17:55 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:17:55 INFO DAGScheduler: running: Set(ShuffleMapStage 17)
+17/12/09 12:17:55 INFO DAGScheduler: waiting: Set(ResultStage 19, ShuffleMapStage 18)
+17/12/09 12:17:55 INFO DAGScheduler: failed: Set()
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ResultStage 19: List(ShuffleMapStage 18)
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ShuffleMapStage 18: List(ShuffleMapStage 17)
+17/12/09 12:17:55 INFO Executor: Running task 1.0 in stage 17.0 (TID 29)
+17/12/09 12:17:55 INFO HadoopRDD: Input split: file:/home/skamthe/project4/movies.csv:229195+229195
+17/12/09 12:17:55 INFO Executor: Finished task 1.0 in stage 17.0 (TID 29). 2254 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 1.0 in stage 17.0 (TID 29) in 51 ms on localhost (1/2)
+17/12/09 12:17:55 INFO Executor: Finished task 0.0 in stage 17.0 (TID 28). 2254 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 0.0 in stage 17.0 (TID 28) in 71 ms on localhost (2/2)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Removed TaskSet 17.0, whose tasks have all completed, from pool 
+17/12/09 12:17:55 INFO DAGScheduler: ShuffleMapStage 17 (map at MovieRecommend2.scala:193) finished in 0.083 s
+17/12/09 12:17:55 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:17:55 INFO DAGScheduler: running: Set()
+17/12/09 12:17:55 INFO DAGScheduler: waiting: Set(ResultStage 19, ShuffleMapStage 18)
+17/12/09 12:17:55 INFO DAGScheduler: failed: Set()
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ResultStage 19: List(ShuffleMapStage 18)
+17/12/09 12:17:55 INFO DAGScheduler: Missing parents for ShuffleMapStage 18: List()
+17/12/09 12:17:55 INFO DAGScheduler: Submitting ShuffleMapStage 18 (MapPartitionsRDD[53] at map at MovieRecommend2.scala:197), which is now runnable
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(3952) called with curMem=11545696, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 3.9 KB, free 519.0 MB)
+17/12/09 12:17:55 INFO MemoryStore: ensureFreeSpace(2028) called with curMem=11549648, maxMem=555755765
+17/12/09 12:17:55 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 2028.0 B, free 519.0 MB)
+17/12/09 12:17:55 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on localhost:41615 (size: 2028.0 B, free: 520.5 MB)
+17/12/09 12:17:55 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:861
+17/12/09 12:17:55 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 18 (MapPartitionsRDD[53] at map at MovieRecommend2.scala:197)
+17/12/09 12:17:55 INFO TaskSchedulerImpl: Adding task set 18.0 with 2 tasks
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 0.0 in stage 18.0 (TID 30, localhost, PROCESS_LOCAL, 2026 bytes)
+17/12/09 12:17:55 INFO TaskSetManager: Starting task 1.0 in stage 18.0 (TID 31, localhost, PROCESS_LOCAL, 2026 bytes)
+17/12/09 12:17:55 INFO Executor: Running task 1.0 in stage 18.0 (TID 31)
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO Executor: Running task 0.0 in stage 18.0 (TID 30)
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+17/12/09 12:17:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:55 INFO Executor: Finished task 1.0 in stage 18.0 (TID 31). 1375 bytes result sent to driver
+17/12/09 12:17:55 INFO TaskSetManager: Finished task 1.0 in stage 18.0 (TID 31) in 30 ms on localhost (1/2)
+17/12/09 12:17:56 INFO Executor: Finished task 0.0 in stage 18.0 (TID 30). 1375 bytes result sent to driver
+17/12/09 12:17:56 INFO TaskSetManager: Finished task 0.0 in stage 18.0 (TID 30) in 64 ms on localhost (2/2)
+17/12/09 12:17:56 INFO TaskSchedulerImpl: Removed TaskSet 18.0, whose tasks have all completed, from pool 
+17/12/09 12:17:56 INFO DAGScheduler: ShuffleMapStage 18 (map at MovieRecommend2.scala:197) finished in 0.064 s
+17/12/09 12:17:56 INFO DAGScheduler: looking for newly runnable stages
+17/12/09 12:17:56 INFO DAGScheduler: running: Set()
+17/12/09 12:17:56 INFO DAGScheduler: waiting: Set(ResultStage 19)
+17/12/09 12:17:56 INFO DAGScheduler: failed: Set()
+17/12/09 12:17:56 INFO DAGScheduler: Missing parents for ResultStage 19: List()
+17/12/09 12:17:56 INFO DAGScheduler: Submitting ResultStage 19 (MapPartitionsRDD[56] at saveAsTextFile at MovieRecommend2.scala:209), which is now runnable
+17/12/09 12:17:56 INFO MemoryStore: ensureFreeSpace(114584) called with curMem=11551676, maxMem=555755765
+17/12/09 12:17:56 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 111.9 KB, free 518.9 MB)
+17/12/09 12:17:56 INFO MemoryStore: ensureFreeSpace(38635) called with curMem=11666260, maxMem=555755765
+17/12/09 12:17:56 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 37.7 KB, free 518.8 MB)
+17/12/09 12:17:56 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on localhost:41615 (size: 37.7 KB, free: 520.5 MB)
+17/12/09 12:17:56 INFO SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:861
+17/12/09 12:17:56 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 19 (MapPartitionsRDD[56] at saveAsTextFile at MovieRecommend2.scala:209)
+17/12/09 12:17:56 INFO TaskSchedulerImpl: Adding task set 19.0 with 2 tasks
+17/12/09 12:17:56 INFO TaskSetManager: Starting task 0.0 in stage 19.0 (TID 32, localhost, PROCESS_LOCAL, 1964 bytes)
+17/12/09 12:17:56 INFO TaskSetManager: Starting task 1.0 in stage 19.0 (TID 33, localhost, PROCESS_LOCAL, 1964 bytes)
+17/12/09 12:17:56 INFO Executor: Running task 0.0 in stage 19.0 (TID 32)
+17/12/09 12:17:56 INFO Executor: Running task 1.0 in stage 19.0 (TID 33)
+17/12/09 12:17:56 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:56 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+17/12/09 12:17:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+17/12/09 12:17:56 INFO FileOutputCommitter: Saved output of task 'attempt_201712091217_0019_m_000001_33' to file:/home/skamthe/project4/ratedmovies/_temporary/0/task_201712091217_0019_m_000001
+17/12/09 12:17:56 INFO SparkHadoopMapRedUtil: attempt_201712091217_0019_m_000001_33: Committed
+17/12/09 12:17:56 INFO Executor: Finished task 1.0 in stage 19.0 (TID 33). 1165 bytes result sent to driver
+17/12/09 12:17:56 INFO TaskSetManager: Finished task 1.0 in stage 19.0 (TID 33) in 117 ms on localhost (1/2)
+17/12/09 12:17:56 INFO FileOutputCommitter: Saved output of task 'attempt_201712091217_0019_m_000000_32' to file:/home/skamthe/project4/ratedmovies/_temporary/0/task_201712091217_0019_m_000000
+17/12/09 12:17:56 INFO SparkHadoopMapRedUtil: attempt_201712091217_0019_m_000000_32: Committed
+17/12/09 12:17:56 INFO Executor: Finished task 0.0 in stage 19.0 (TID 32). 1165 bytes result sent to driver
+17/12/09 12:17:56 INFO TaskSetManager: Finished task 0.0 in stage 19.0 (TID 32) in 121 ms on localhost (2/2)
+17/12/09 12:17:56 INFO TaskSchedulerImpl: Removed TaskSet 19.0, whose tasks have all completed, from pool 
+17/12/09 12:17:56 INFO DAGScheduler: ResultStage 19 (saveAsTextFile at MovieRecommend2.scala:209) finished in 0.085 s
+17/12/09 12:17:56 INFO DAGScheduler: Job 2 finished: saveAsTextFile at MovieRecommend2.scala:209, took 0.353458 s
+time take:365
+17/12/09 12:17:56 INFO SparkContext: Invoking stop() from shutdown hook
+17/12/09 12:17:56 INFO SparkUI: Stopped Spark web UI at http://198.202.114.159:4040
+17/12/09 12:17:56 INFO DAGScheduler: Stopping DAGScheduler
+17/12/09 12:17:56 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+17/12/09 12:17:56 INFO MemoryStore: MemoryStore cleared
+17/12/09 12:17:56 INFO BlockManager: BlockManager stopped
+17/12/09 12:17:56 INFO BlockManagerMaster: BlockManagerMaster stopped
+17/12/09 12:17:56 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+17/12/09 12:17:56 INFO SparkContext: Successfully stopped SparkContext
+17/12/09 12:17:56 INFO ShutdownHookManager: Shutdown hook called
+17/12/09 12:17:56 INFO ShutdownHookManager: Deleting directory /tmp/spark-7ab5eda2-9daa-4cfe-ab84-2f7916556c03
